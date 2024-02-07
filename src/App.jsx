@@ -44,6 +44,7 @@ function App() {
       {modal && <Modal 
                    setModal={setModal}
                    animarModal={animarModal}
+                   setAnimarModal={setAnimarModal}
                  />}
     </div>
   

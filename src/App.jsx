@@ -8,9 +8,18 @@ function App() {
 //  definimos nuestro estado de presupuesto
    const[presupuesto,setPresupuesto] = useState(0);
    const[isValidPresupuesto,setIsValidPresupuesto] = useState(false);
+
    const [modal , setModal] = useState(false)
+   const [animarModal , setAnimarModal] = useState(false)
+
+
+
    const handleNuevoGasto = () => {
       setModal(true)
+
+      setTimeout(() => {
+        setAnimarModal(true)
+      },1000);
   
   }
   return (
@@ -34,6 +43,7 @@ function App() {
 
       {modal && <Modal 
                    setModal={setModal}
+                   animarModal={animarModal}
                  />}
     </div>
   

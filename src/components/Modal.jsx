@@ -4,8 +4,12 @@ const Modal = ({setModal, animarModal, setAnimarModal}) => {
 
 
     const ocultarModal = () => {
-        setModal(false)
         setAnimarModal(false)
+
+        setTimeout(() => {
+            setModal(false)
+        }, 1000);
+      
     }
 
   return (
@@ -18,7 +22,7 @@ const Modal = ({setModal, animarModal, setAnimarModal}) => {
             />
         </div>
 
-        <form className={`formulario ${animarModal ? "animar" :''}`}>
+        <form className={`formulario ${animarModal ? "animar" :'cerrar'}`}>
             <legend>Nuevo Gasto</legend>
         </form>
     </div>

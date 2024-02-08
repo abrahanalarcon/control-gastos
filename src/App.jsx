@@ -24,10 +24,19 @@ function App() {
       },1000);
   
   }
-  
+
   const guardarGasto = gasto => {
     gastos.id = generarId();
     setGastos([...gastos, gasto]);
+
+    
+      setAnimarModal(false)
+
+      setTimeout(() => {
+          setModal(false)
+      }, 500);
+    
+  
   }
 
   return (

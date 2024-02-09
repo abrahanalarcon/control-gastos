@@ -6,7 +6,6 @@ import { generarId } from './helpers'
 import IconoNuevoGasto from './img/nuevo-gasto.svg'
 
 function App() {
- 
 //  definimos nuestro estado de presupuesto
    const [gastos, setGastos] = useState([])
 
@@ -18,20 +17,24 @@ function App() {
 
    const [gastoEditar, setGastoEditar] = useState({})
 
-
    useEffect(() => {
-      if( Object.keys(gastoEditar).length > 0){
-        handleNuevoGasto()
-      }
-      
-   },[gastoEditar])
+    if (Object.keys(gastoEditar).length > 0) {
+        setModal(true);
+
+        setTimeout(() => {
+            setAnimarModal(true);
+        }, 500);
+    }
+}, [gastoEditar]);
+
 
    const handleNuevoGasto = () => {
       setModal(true)
+      setGastoEditar({})
 
       setTimeout(() => {
         setAnimarModal(true)
-      },1000);
+      },500);
   
   }
 
@@ -49,6 +52,8 @@ function App() {
     
   
   }
+
+
  
   return (
     <div className={modal ? 'fijar' : ''}>

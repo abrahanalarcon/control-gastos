@@ -185,6 +185,10 @@ header h1 {
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    @media (max-width: 400px) {
+        font-size: 2rem;  /* Tamaño de fuente más pequeño para pantallas pequeñas */
+        padding: 0.8rem;  /* Espaciado interno más pequeño para pantallas pequeñas */
+    }
 }
 
 .contenedor-presupuesto svg {

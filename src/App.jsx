@@ -9,7 +9,7 @@ function App() {
 //  definimos nuestro estado de presupuesto
    const [gastos, setGastos] = useState([])
 
-   const[presupuesto, setPresupuesto] = useState(0);
+   const[presupuesto, setPresupuesto] = useState();
    const[isValidPresupuesto,setIsValidPresupuesto] = useState(false);
 
    const [modal , setModal] = useState(false)

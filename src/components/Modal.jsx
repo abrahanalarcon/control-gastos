@@ -24,6 +24,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
     }, []);
 
     const ocultarModal = () => {
+        console.log('Clic en cerrar modal'); // Agrega este console.log
         setAnimarModal(false)
         setGastoEditar({})
         setTimeout(() => {

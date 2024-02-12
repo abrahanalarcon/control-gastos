@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import {
    LeadingActions,
    SwipeableList,
@@ -92,4 +92,15 @@ const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
   )
 }
 
+Gasto.propTypes = {
+  gasto: PropTypes.shape({
+    categoria: PropTypes.string.isRequired,
+    nombre: PropTypes.string.isRequired,
+    cantidad: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+    fecha: PropTypes.string.isRequired,
+  }).isRequired,
+  setGastoEditar: PropTypes.func.isRequired,
+  eliminarGasto: PropTypes.func.isRequired,
+};
 export default Gasto

@@ -3,7 +3,14 @@ import Mensaje from './Mensaje';
 import CerrarBtn from '../img/cerrar.svg'
 
 
-const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar,setGastoEditar}) => {
+const Modal = ({
+    setModal,
+    animarModal,
+    setAnimarModal,
+    guardarGasto,
+    gastoEditar,
+    setGastoEditar
+}) => {
 
     const [mensaje, setMensaje] = useState ('');
     const [nombre, setNombre] = useState('')

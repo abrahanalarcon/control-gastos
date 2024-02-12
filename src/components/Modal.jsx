@@ -3,7 +3,7 @@ import Mensaje from './Mensaje';
 import CerrarBtn from '../img/cerrar.svg'
 
 
-const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar}) => {
+const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar,setGastoEditar}) => {
 
     const [mensaje, setMensaje] = useState ('');
     const [nombre, setNombre] = useState('')
@@ -11,6 +11,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
     const [categoria, setCategoria] = useState('')
     const [fecha, setFecha] = useState('')
     const [id, setId] = useState('')
+    
     
     useEffect(() => {
         if( Object.keys(gastoEditar).length > 0) {
@@ -24,7 +25,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
 
     const ocultarModal = () => {
         setAnimarModal(false)
-
+        setGastoEditar({})
         setTimeout(() => {
             setModal(false)
         }, 1000);

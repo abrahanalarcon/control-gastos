@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import NuevoPresupuesto from './NuevoPresupuesto'
 import ControlPresupuesto from './ControlPresupuesto'
 
@@ -30,5 +30,12 @@ const Header = ({
     </header>
   )
 }
+Header.propTypes = {
+  gastos: PropTypes.array.isRequired,
+  presupuesto: PropTypes.number.isRequired,
+  setPresupuesto: PropTypes.func.isRequired,
+  isValidPresupuesto: PropTypes.bool.isRequired,
+  setIsValidPresupuesto: PropTypes.func.isRequired,
+};
 
 export default Header

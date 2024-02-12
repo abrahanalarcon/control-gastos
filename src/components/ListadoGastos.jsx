@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import Gasto from './Gasto'
 
 const ListadoGastos = ({gastos, setGastoEditar, eliminarGasto}) => {
@@ -18,5 +18,9 @@ const ListadoGastos = ({gastos, setGastoEditar, eliminarGasto}) => {
     </div>
   )
 }
-
+ListadoGastos.propTypes = {
+  gastos: PropTypes.array.isRequired,
+  setGastoEditar: PropTypes.func.isRequired,
+  eliminarGasto: PropTypes.func.isRequired,
+};
 export default ListadoGastos

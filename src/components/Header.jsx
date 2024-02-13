@@ -36,6 +36,7 @@ const Header = ({
 }
 Header.propTypes = {
   gastos: PropTypes.array.isRequired,
+  setGastos: PropTypes.array.isRequired,
   presupuesto: PropTypes.number.isRequired,
   setPresupuesto: PropTypes.func.isRequired,
   isValidPresupuesto: PropTypes.bool.isRequired,

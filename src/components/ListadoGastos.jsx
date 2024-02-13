@@ -45,5 +45,7 @@ ListadoGastos.propTypes = {
   gastos: PropTypes.array.isRequired,
   setGastoEditar: PropTypes.func.isRequired,
   eliminarGasto: PropTypes.func.isRequired,
+  filtro: PropTypes.func.isRequired,
+  gastosFiltrados: PropTypes.func.isRequired,
 };
 export default ListadoGastos

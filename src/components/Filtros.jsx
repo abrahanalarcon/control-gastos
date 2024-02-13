@@ -26,4 +26,5 @@ const Filtros = ({filtro, setFiltro ,gastosFiltrados, setGastosFiltrados}) => {
   )
 }
 
+
 export default Filtros

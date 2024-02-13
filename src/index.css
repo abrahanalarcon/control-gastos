@@ -353,6 +353,10 @@ main {
     height: 3rem;
     z-index: 100;
 }
+
+.modal .cerrar-modal:hover {
+    opacity: 0.8; 
+}
 .modal .cerrar-modal img {
     width: 100%;
 }
